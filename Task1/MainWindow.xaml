@@ -1,0 +1,45 @@
+﻿<Window x:Class="Task1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Task1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel>
+        <Menu x:Name="MainMenu" DockPanel.Dock="Left" Width="100">
+            <Button x:Name="BurgerButton"  Height="80" Width="80">
+                <Image Source="/гамбургер.png"/>
+                <Button.Triggers>
+                    <EventTrigger RoutedEvent="Button.Click">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="MainMenu" Storyboard.TargetProperty="Width"
+                                To="50" Duration="0:0:1"/>
+                                <DoubleAnimation Storyboard.TargetName="Label1" Storyboard.TargetProperty="FontSize"
+                                To="8" Duration="0:0:1"/>
+                                <DoubleAnimation Storyboard.TargetName="Label2" Storyboard.TargetProperty="FontSize"
+                                To="8" Duration="0:0:1"/>
+                                <DoubleAnimation Storyboard.TargetName="Label3" Storyboard.TargetProperty="FontSize"
+                                To="8" Duration="0:0:1"/>
+                                <DoubleAnimation Storyboard.TargetName="Label4" Storyboard.TargetProperty="FontSize"
+                                To="8" Duration="0:0:1"/>
+                                <DoubleAnimation Storyboard.TargetName="BurgerButton" Storyboard.TargetProperty="Width"
+                                To="40" Duration="0:0:1"/>
+                                <DoubleAnimation Storyboard.TargetName="BurgerButton" Storyboard.TargetProperty="Height"
+                                To="40" Duration="0:0:1"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Button.Triggers>
+            </Button>
+            <StackPanel>
+                <Label x:Name="Label1" Content="LABEL" FontSize="15" Margin="8"/>
+                <Label x:Name="Label2" Content="LABEL" FontSize="15" Margin="8"/>
+                <Label x:Name="Label3" Content="LABEL" FontSize="15" Margin="8"/>
+                <Label x:Name="Label4" Content="LABEL" FontSize="15" Margin="8"/>
+            </StackPanel>
+        </Menu>
+        <TextBlock/>
+    </DockPanel>
+</Window>
