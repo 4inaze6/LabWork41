@@ -8,36 +8,15 @@
         Title="MainWindow" Height="450" Width="800">
     <DockPanel>
         <Menu x:Name="MainMenu" DockPanel.Dock="Left" Width="100">
-            <Button x:Name="BurgerButton"  Height="80" Width="80">
+            <Button x:Name="BurgerButton"  Height="80" Width="80" Click="HamburgerButton_Click">
                 <Image Source="/гамбургер.png"/>
-                <Button.Triggers>
-                    <EventTrigger RoutedEvent="Button.Click">
-                        <BeginStoryboard>
-                            <Storyboard>
-                                <DoubleAnimation Storyboard.TargetName="MainMenu" Storyboard.TargetProperty="Width"
-                                To="50" Duration="0:0:1"/>
-                                <DoubleAnimation Storyboard.TargetName="Label1" Storyboard.TargetProperty="FontSize"
-                                To="8" Duration="0:0:1"/>
-                                <DoubleAnimation Storyboard.TargetName="Label2" Storyboard.TargetProperty="FontSize"
-                                To="8" Duration="0:0:1"/>
-                                <DoubleAnimation Storyboard.TargetName="Label3" Storyboard.TargetProperty="FontSize"
-                                To="8" Duration="0:0:1"/>
-                                <DoubleAnimation Storyboard.TargetName="Label4" Storyboard.TargetProperty="FontSize"
-                                To="8" Duration="0:0:1"/>
-                                <DoubleAnimation Storyboard.TargetName="BurgerButton" Storyboard.TargetProperty="Width"
-                                To="40" Duration="0:0:1"/>
-                                <DoubleAnimation Storyboard.TargetName="BurgerButton" Storyboard.TargetProperty="Height"
-                                To="40" Duration="0:0:1"/>
-                            </Storyboard>
-                        </BeginStoryboard>
-                    </EventTrigger>
-                </Button.Triggers>
+                
             </Button>
-            <StackPanel>
-                <Label x:Name="Label1" Content="LABEL" FontSize="15" Margin="8"/>
-                <Label x:Name="Label2" Content="LABEL" FontSize="15" Margin="8"/>
-                <Label x:Name="Label3" Content="LABEL" FontSize="15" Margin="8"/>
-                <Label x:Name="Label4" Content="LABEL" FontSize="15" Margin="8"/>
+            <StackPanel x:Name="BurgerStackPanel" Width="80">
+                <Label Content="Моя страница" FontSize="15" Margin="8"/>
+                <Label Content="Музыка" FontSize="15" Margin="8"/>
+                <Label Content="Фото" FontSize="15" Margin="8"/>
+                <Label Content="Другое" FontSize="15" Margin="8"/>
             </StackPanel>
         </Menu>
         <TextBlock/>
