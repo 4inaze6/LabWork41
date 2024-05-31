@@ -17,7 +17,7 @@ namespace Task1
     /// </summary>
     public partial class MainWindow : Window
     {
-        private bool menuIsOpen = false;
+        private bool menuIsOpen = true;
         public MainWindow()
         {
             InitializeComponent();
